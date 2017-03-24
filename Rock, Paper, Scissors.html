@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <script>
+      var playerString = prompt("Rock, paper, or scissors?");
+      var computerNumber = Math.ceil(Math.random() * 3)
+      var computerString;
+      if (computerNumber === 1) {
+        computerString === "Rock";
+      } else if (computerNumber === 2) {
+        computerString === "Paper";
+      } else if (computerNumber === 3) {
+        computerString === "Scissors";
+      }
+      var times = 0;
+      while (times < 5) {
+        if (playerString === computerString) {
+          alert("You picked the same choice as an automated system. Good for you.")
+        } else if (computerNumber === 1 and playerString === "Scissors") {
+        alert("An automated system beat you.")
+        } else if (computerNumber === 1 and playerString === "Paper") {
+        alert("You beat an automated system! Yay!")
+        } else if (computerNumber === 2 and playerString === "Rock") {
+        alert("An automated system beat you.")
+        } else if (computerNumber === 2 and playerString === "Scissors") {
+        alert("You beat an automated system! Yay!")
+        } else if (computerNumber === 3 and playerString === "Rock") {
+        alert("You beat an automated system! Yay!")
+        } else if (computerNumber === 3 and playerString === "Paper") {
+        alert("An automated system beat you.")
+      }
+      times = times + 1;
+    }
+
+    </script>
+  </body>
+</html>
