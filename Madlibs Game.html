@@ -1,0 +1,43 @@
+<html>
+  <head>
+      <title>Hello, this is my Madlib page></title>
+    </head>
+    <body>
+    <script>
+
+    function sentence() {
+      var verbInput = document.getElementById("verb");
+      var adjectiveInput = document.getElementById("adjective");
+      var nounInput = document.getElementById("noun");
+      var integerInput = document.getElementById("integer");
+      var pluralNounInput = document.getElementById("plural noun");
+      var colorInput = document.getElementById("color");
+      var adjectiveInput2 = document.getElementById("adjective 2");
+      alert("There was a " +  nounInput.value  + " in my house! It then " + adjectiveInput.value + " " + verbInput.value  + " out of my house, anyhow. But then, the " + nounInput.value + " came back with " + integerInput.value + " " + pluralNounInput.value + ". I couldn't escape as they tore me into bits, with " + colorInput.value + " blood leaking in clumps out of my body. But then, I resurrected as I had another life and I " + adjectiveInput2.value + " tore the creatures into bits.");
+    }
+
+    </script>
+    <label for="noun">Noun</label>
+    <input id="noun"></input><br>
+
+    <label for="adjective">Adjective</label>
+    <input id="adjective"></input><br>
+
+    <label for="verb">Verb</label>
+    <input id="verb"></input><br>
+
+    <label for="integer">Integer</label>
+    <input id="integer"></input><br>
+
+    <label for="plural noun">Plural Noun</label>
+    <input id="plural noun"></input><br>
+
+    <label for="color">Color</label>
+    <input id="color"></input><br>
+
+    <label for="adjective 2">Adjective 2</label>
+    <input id="adjective 2"></input><br>
+
+    <button onclick="sentence();">CLICK FOR A MAD LIBS PAGE</button>
+    </body>
+</html>
