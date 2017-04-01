@@ -1,0 +1,126 @@
+<html>
+  <body>
+    <script>
+
+    var questions = [
+      "Who created the Mona Lisa?",
+      "What is the largest office building in the world?",
+      "Where was the first subway built?",
+      "What is the meaning of the Greek word Pita?",
+      "What is the house number of the Simpsons?",
+      "Who is the creator of Marvel, who also is shown in all of his movies?",
+      "Who is associated the most/been in the most movies with George Lucas?",
+      "What is the largest species of tiger?",
+      "What was the first movie that starred Indiana Jones in it called?",
+      "In what year was Google launched onto the web?",
+      "What symbol that originated in Ancient India is on the modern Indian flag?",
+      "What was it called when humans started to settle and farm rather than hunt and gather?",
+      "What natural barrier mainly separated India and China from each other?",
+      "What was the first main ancient civilization?",
+      "What is the most ancient religion that is still practiced by some people today?",
+      "What is the national sport of Japan?",
+      "What was the former name of New York?",
+      "Who was the person in Greek Mythology that killed the Minotaur?",
+      "What is the largest city in Canada?",
+      "Who created the atomic bomb?",
+      "Who discovered the antibiotic penicillin?",
+      "What is the main component of glass?",
+      "Where were the Olympics held in 1996?",
+      "What is the largest freshwater lake in the world?",
+      "Which actress has won the most Oscars",
+      "What is the house number of Family Guy (also give the street)?",
+      "In what state would one find Fort Knox?",
+      "In which country did Kung Fu originate in?",
+      "In what Star Wars film did the Ewoks first appear?",
+      "In what Star Wars film did the Jawa first appear?",
+      "In what city was Walt Disney born?",
+      "Who played Luke Skywalker in the Star Wars movies?",
+      "Who created Github?",
+      "Which country was the first to give women the right to vote?",
+      "Which country is the duck-billed platypus native to?",
+      "On which planet was the largest volcano discovered?",
+      "What is the name of the world's largest and most powerful particle accelerator?",
+      "What was the original flavor of the filling in Twinkies?",
+      "Which country has the most volcanoes?",
+      "Where was the fortune cookie invented?",
+      "The Artful Dodger is a character from which novel?",
+      "What country and its territories cover up the most time zones (actually twelve of them)?",
+      "What extinct shark was thought to be the largest ever on Earth?",
+      "What is the national animal of Scotland?",
+      "Which animal has the fastest metabolism?",
+      "Who played Deadpool in the 2016 movie?",
+      "What is the capital of Croatia?",
+      "The longest snake ever held in captivity belongs to what species?",
+      "What is the longest organ of the human body?"
+    ];
+    var answers = [
+    "Leonardo da Vinci",
+     "The Pentagon",
+     "London",
+     "Bread",
+     "742",
+     "Stan Lee",
+     "Harrison Ford",
+     "The Siberian Tiger",
+     "Indiana Jones and the Raiders of the Lost Ark",
+     "1998", "The Wheel of Asoka",
+     "The Neolithic Revolution",
+     "The Himalayas",
+     "Mesopotamia",
+     "Hinduism",
+     "Sumo Wrestling",
+     "New Amsterdam",
+     "Theseus",
+     "Toronto",
+     "Robert Oppenheimer",
+     "Alexander Fleming",
+     "Sand",
+     "Atlanta",
+     "Lake Superior",
+     "Katharine Hepburn",
+     "31 Spooner Street",
+     "Kentucky",
+     "China",
+     "Return of the Jedi",
+     "A New Hope",
+     "Chicago",
+     "Mark Hamill",
+     "Tom Preston-Werner",
+     "New Zealand",
+     "Australia",
+     "Mars",
+     "The Large Hadron Collider",
+     "Banana Cream",
+     "Indonesia",
+     "California",
+     "Oliver Twist",
+     "France",
+     "Megalodon",
+     "Unicorn",
+     "Hummingbird",
+     "Ryan Reynolds",
+     "Zagreb",
+     "Reticulated Python",
+     "Skin"
+   ];
+    var i = 0;
+
+      function flashcard() {
+        while (i < questions.length) {
+          recurse();
+          i = i + 1;
+        }
+      }
+
+      function recurse() {
+        var response = prompt(questions[i]);
+        if (response == answers[i]) {
+          alert("You are correct!")
+        } else {
+          recurse();
+        }
+      }
+      </script>
+        <button onclick=flashcard();>CLICK FOR SOME FLASHCARDS THAT YOU WILL HAVE TO ANSWER, OR ELSE</button>
+  </body>
+</html>
