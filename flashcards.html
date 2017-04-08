@@ -27,7 +27,7 @@
       "What is the main component of glass?",
       "Where were the Olympics held in 1996?",
       "What is the largest freshwater lake in the world?",
-      "Which actress has won the most Oscars",
+      "Which actress has won the most Oscars?",
       "What is the house number of Family Guy (also give the street)?",
       "In what state would one find Fort Knox?",
       "In which country did Kung Fu originate in?",
@@ -51,7 +51,17 @@
       "Who played Deadpool in the 2016 movie?",
       "What is the capital of Croatia?",
       "The longest snake ever held in captivity belongs to what species?",
-      "What is the longest organ of the human body?"
+      "What is the longest organ of the human body?",
+      "From what language did English borrow the word 'mammoth?'",
+      "In which country is the ghost pepper cultivated in?",
+      "How many years did it take to build the Taj Mahal?",
+      "What is wasabi?",
+      "What is the lowest point in the United States?",
+      "What ships did Vikings sail in?",
+      "What is Walt Disney's middle name?",
+      "What is the name of Marge's mother in the Simpsons?",
+      "Who starred in the Forbidden Kingdom, Dragon Blade, and Mr.Nice Guy, among other films?",
+      "What is 54000000000000000000000000000000000000000000000000000000000/3?"
     ];
     var answers = [
     "Leonardo da Vinci",
@@ -101,23 +111,33 @@
      "Ryan Reynolds",
      "Zagreb",
      "Reticulated Python",
-     "Skin"
+     "Skin",
+     "Russian",
+     "Bangladesh",
+     "22",
+     "Japanese horseradish",
+     "Death Valley",
+     "Longboats",
+     "Elias",
+     "Jacqueline Bouvier",
+     "Jackie Chan",
+     "18000000000000000000000000000000000000000000000000000000000"
    ];
     var i = 0;
 
       function flashcard() {
         while (i < questions.length) {
-          recurse();
-          i = i + 1;
+          bringBack();
+          i = i + 1
         }
       }
 
-      function recurse() {
+      function bringBack() {
         var response = prompt(questions[i]);
         if (response == answers[i]) {
           alert("You are correct!")
         } else {
-          recurse();
+          bringBack();
         }
       }
       </script>
