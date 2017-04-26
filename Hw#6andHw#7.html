@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <script src="https://rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+  </head>
+    <body>
+      <script>
+        function start() {
+          Crafty.init();
+          Crafty.audio.add("jump", "sounds/jump.mp3");
+          Crafty.audio.add("Theme","");
+          var player = Crafty.e("Player, 2D, DOM, Color, Twoway, Gravity, Collision, Solid");
+          player.color("cyan");
+          player.h = 50;
+          player.w = 50;
+          player.x = 50;
+          player.y = 50;
+          var attributes = {w: 50, h: 50, x: 50, y: 50}
+          player.attr(attributes);
+          player.twoway(200);
+          player.gravity("Floor");
+          var floor = Crafty.e("Floor, 2D, DOM, Color");
+          floor.attr({x: 0, y: 200, h: 10, w: 150});
+          floor.color("blue");
+          var goal = Crafty.e("2D, DOM, Color, Solid, Collision");
+          goal.attr({x: 425, y:50, w: 10, h: 10});
+          goal.color("red");
+
+
+          goal.onHit("Player", win);
+        }
+
+        var won = false;
+        function win() {
+          if (!won) {
+            alert("You win!");
+            won = true;
+            window.location.href='https://images.8tracks.com/cover/i/001/132/573/68696.original-6467.jpg?rect=0,0,400,400&q=98&fm=jpg&fit=max'
+          }
+        }
+        window.onload = start;
+      </script>
+    </body>
+</html>
