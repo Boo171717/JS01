@@ -1,7 +1,22 @@
 <html>
-  <body>
+  <head>
+    <script src="https://rawgit.com/craftyjs/Crafty/release/dist/crafty-min.js"></script>
+  </head>
+    <body>
     <script>
-
+    Crafty.init(800,400);
+    var blueSquare = Crafty.e("2D, DOM, Color");
+    blueSquare.color("cyan");
+    blueSquare.h = 50;
+    blueSquare.w = 50;
+    blueSquare.x = 100;
+    blueSquare.y = 0;
+    var redSquare = Crafty.e("2D, DOM, Color");
+    redSquare.color("red");
+    redSquare.h = 50;
+    redSquare.w = 50;
+    redSquare.x = 150;
+    redSquare.y = 0;
     var questions = [
       "Who created the Mona Lisa?",
       "What is the largest office building in the world?",
@@ -61,7 +76,20 @@
       "What is Walt Disney's middle name?",
       "What is the name of Marge's mother in the Simpsons?",
       "Who starred in the Forbidden Kingdom, Dragon Blade, and Mr.Nice Guy, among other films?",
-      "What is 54000000000000000000000000000000000000000000000000000000000/3?"
+      "What is 54000000000000000000000000000000000000000000000000000000000/3?",
+      "What is the capital of Puerto Rico?",
+      "Which of the following states has a city named Harrisburg in it? (California, Ohio, Michigan, Virginia)",
+      "In which year did Hurricane Katrina occur in?",
+      "Which US president was shot by the assassin Charles J Guiteau in 1881?",
+      "What is a group of lions called?",
+      "Batrachophobia is a fear of what type of creature?",
+      "What does the letter L in URL stand for?",
+      "Plutophobia is the fear of what?",
+      "What is the national animal of Romania?",
+      "Thermophobia is the fear of what?",
+      "In what year did the U.S. first host the Summer Olympic Games?",
+      "Approximately when was the Colosseum built?",
+      "In what year did the Spanish Civil War start?"
     ];
     var answers = [
     "Leonardo da Vinci",
@@ -73,7 +101,8 @@
      "Harrison Ford",
      "The Siberian Tiger",
      "Indiana Jones and the Raiders of the Lost Ark",
-     "1998", "The Wheel of Asoka",
+     "1998",
+     "The Wheel of Asoka",
      "The Neolithic Revolution",
      "The Himalayas",
      "Mesopotamia",
@@ -121,26 +150,37 @@
      "Elias",
      "Jacqueline Bouvier",
      "Jackie Chan",
-     "18000000000000000000000000000000000000000000000000000000000"
+     "18000000000000000000000000000000000000000000000000000000000",
+     "San Juan",
+     "Virginia",
+     "2005",
+     "James A Garfield",
+     "A pride",
+     "Amphibians",
+     "Locator",
+     "Wealth",
+     "Lynx",
+     "Heat",
+     "1904",
+     "70-80 AD",
+     "1936"
    ];
     var i = 0;
-
       function flashcard() {
-        while (i < questions.length) {
-          bringBack();
-          i = i + 1
+          var response = prompt(questions[i]);
+          if (response == answers[i]) {
+            alert("You are correct!");
+            redSquare.visible = false;
+            blueSquare.visible = true;
+            i = i + 1
+          } else {
+            blueSquare.visible = false;
+            redSquare.visible = true;
+            alert("You are incorrect. Try again...")
+          }
         }
-      }
 
-      function bringBack() {
-        var response = prompt(questions[i]);
-        if (response == answers[i]) {
-          alert("You are correct!")
-        } else {
-          bringBack();
-        }
-      }
       </script>
-        <button onclick=flashcard();>CLICK FOR SOME FLASHCARDS THAT YOU WILL HAVE TO ANSWER, OR ELSE</button>
+        <button onclick=flashcard();>CLICK FOR SOME FLASHCARDS THAT YOU WILL HAVE TO ANSWER (If you get a question right, then a blue square will appear. If you don't, then a red square will appear. Then click this button again for more questions...)</button>
   </body>
 </html>
